@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>TODO App</title>
+  </head>
+  <body>
+
+
+    <ul id="container">
+      <!-- Empty ul -->
+    </ul>
+
+    <!-- Form with: -->
+    <form onsubmit="taskList()" id="taskOverview">
+    <!-- text field for task description -->
+      <label>Task description:
+        <input type="text" name="task-description" id="task">
+      </label>
+    <!-- list of radio buttons of name for whome the task is assigned -->
+      <fieldset>
+        <legend>Task Master</legend>
+        <label>
+          <input type="radio" name="taskMaster" class=taskNames value="Dave">Dave
+        </label>
+        <label>
+          <input type="radio" name="taskMaster" class=taskNames value="Pickles the Cat">Pickles the Cat
+        </label>
+        <label>
+          <input type="radio" name="taskMaster" class=taskNames value="Dave again">Dave again
+        </label>
+      </fieldset>
+    <!-- dropdown list to indicate the difficulty of the task -->
+      <label for="difficulty">How difficult is the task?</label>
+      <select name="difficulty" id="difficulty">
+        <option value="">Please choose one</option>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="difficult">Difficult</option>
+        <option value="mega-difficult">Mega Difficult</option>
+        <option value="ultra-mega">Ultra Mega Difficult</option>
+      </select>
+
+      <input type="submit" name="submit" id="trigger">
+
+    </form>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>
