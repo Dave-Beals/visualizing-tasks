@@ -6,16 +6,15 @@
   </head>
   <body>
 
-
-    <ul id="container">
+    <div id="container"></div>
       <!-- Empty ul -->
-    </ul>
+    <div id="parent"></div>
 
     <!-- Form with: -->
     <form onsubmit="taskList()" id="taskOverview">
     <!-- text field for task description -->
       <label>Task description:
-        <input type="text" name="task-description" id="task">
+        <input type="text" name="taskDesc" id="taskDesc">
       </label>
     <!-- list of radio buttons of name for whome the task is assigned -->
       <fieldset>
@@ -31,19 +30,21 @@
         </label>
       </fieldset>
     <!-- dropdown list to indicate the difficulty of the task -->
-      <label for="difficulty">How difficult is the task?</label>
-      <select name="difficulty" id="difficulty">
-        <option value="">Please choose one</option>
-        <option value="easy">Easy</option>
-        <option value="medium">Medium</option>
-        <option value="difficult">Difficult</option>
-        <option value="mega-difficult">Mega Difficult</option>
-        <option value="ultra-mega">Ultra Mega Difficult</option>
-      </select>
+      <fieldset>
+        <legend>How hard is it?</legend>
+        <label for="difficulty">How difficult is the task?</label>
+        <select name="difficulty" id="difficulty">
+          <option value="Easy">Easy</option>
+          <option value="Medium">Medium</option>
+          <option value="Difficult">Difficult</option>
+          <option value="Mega-difficult">Mega Difficult</option>
+          <option value="Ultra-mega">Ultra Mega Difficult</option>
+        </select>
+      </fieldset>
 
-      <input type="submit" name="submit" id="trigger">
+      <input type="submit" name="submit" value="Create Task" id="createTask">
 
     </form>
-    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/charts.js"></script>
   </body>
 </html>
