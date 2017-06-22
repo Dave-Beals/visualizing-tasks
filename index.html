@@ -20,13 +20,13 @@
       <fieldset>
         <legend>Task Master</legend>
         <label>
-          <input type="radio" name="taskMaster" class=taskNames value="Dave">Dave
+          <input type="radio" name="taskMaster" class=taskNames value="Dave" id="dave">Dave
         </label>
         <label>
-          <input type="radio" name="taskMaster" class=taskNames value="Pickles the Cat">Pickles the Cat
+          <input type="radio" name="taskMaster" class=taskNames value="Pickles the Cat" id="pickles">Pickles the Cat
         </label>
         <label>
-          <input type="radio" name="taskMaster" class=taskNames value="Dave again">Dave again
+          <input type="radio" name="taskMaster" class=taskNames value="Dave again" id="daveAgain">Dave again
         </label>
       </fieldset>
     <!-- dropdown list to indicate the difficulty of the task -->
@@ -34,17 +34,21 @@
         <legend>How hard is it?</legend>
         <label for="difficulty">How difficult is the task?</label>
         <select name="difficulty" id="difficulty">
-          <option value="Easy">Easy</option>
-          <option value="Medium">Medium</option>
-          <option value="Difficult">Difficult</option>
-          <option value="Mega-difficult">Mega Difficult</option>
-          <option value="Ultra-mega">Ultra Mega Difficult</option>
+          <option value="Easy" id="easy">Easy</option>
+          <option value="Medium" id="medium">Medium</option>
+          <option value="Difficult" id="difficult">Difficult</option>
+          <option value="Mega-difficult" id="megaDifficult">Mega Difficult</option>
+          <option value="Ultra-mega" id="ultraMega">Ultra Mega Difficult</option>
         </select>
       </fieldset>
 
       <input type="submit" name="submit" value="Create Task" id="createTask">
 
     </form>
+    <!-- div to hold the chart -->
+    <div id="personChart"></div>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="js/charts.js"></script>
   </body>
 </html>
