@@ -17,13 +17,24 @@ function taskList(){
   var taskMaster = form.taskMaster.value;
   var difficulty = document.getElementById("difficulty").value;
   tasks.push(taskMaster, description, difficulty);
-  if(form.taskMaster.id = "dave") {
-      dave = dave + 1;
-    } else if (form.taskMaster.id = "pickles") {
-        pickles = pickles + 1;
-    } else if (form.taskMaster.id = "daveAgain") {
-      daveAgain = daveAgain + 1;
-    }
+
+  nameTotals();
+}
+
+function nameTotals(){
+  for(var i = 0; i < tasks.length; i++){
+    if(tasks[i] === "Dave")
+      personCount.dave = personCount.dave + 1;
+  }
+  for(var i = 0; i < tasks.length; i++){
+    if(tasks[i] === "Pickles the Cat")
+      personCount.pickles = personCount.pickles + 1;
+  }
+  for(var i = 0; i < tasks.length; i++){
+    if(tasks[i] === "Dave again")
+      personCount.daveAgain = personCount.daveAgain + 1;
+}
+
   drawStacked();
 // presentTask();
 }
