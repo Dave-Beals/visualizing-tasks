@@ -1,9 +1,14 @@
 google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawStacked);
 
-console.log("script is working!")
-
+// console.log("script is working!")
+//
 var tasks = []
+var personCount = {
+  dave: 0,
+  pickles: 0,
+  daveAgain: 0,
+}
 
 function taskList(){
   event.preventDefault();
@@ -12,22 +17,15 @@ function taskList(){
   var taskMaster = form.taskMaster.value;
   var difficulty = document.getElementById("difficulty").value;
   tasks.push(taskMaster, description, difficulty);
-
-  var personCount = {
-    dave: 0,
-    pickles: 0,
-    daveAgain: 0,
-  }
-
-  if form.taskMaster.value = "Dave" {
-    dave = dave + 1;
-  } else if form.taskMaster.value = "Pickles the Cat" {
-    pickles = pickles + 1;
-  } else if form.taskMaster.value = "Dave again" {
-    daveAgain = daveAgain + 1;
-  }
-    drawStacked();
-  // presentTask();
+  if(form.taskMaster.id = "dave") {
+      dave = dave + 1;
+    } else if (form.taskMaster.id = "pickles") {
+        pickles = pickles + 1;
+    } else if (form.taskMaster.id = "daveAgain") {
+      daveAgain = daveAgain + 1;
+    }
+  drawStacked();
+// presentTask();
 }
 
 
@@ -41,14 +39,6 @@ function taskList(){
 //     ul.appendChild(newNode);
 //   }
 //   parent.appendChild(ul);
-// }
-
-
-//PASTED ABOVE TO TEST
-// var personCount = {
-//   dave: 0,
-//   pickles: 0,
-//   daveAgain: 0,
 // }
 
 
